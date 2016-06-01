@@ -9,7 +9,7 @@ module.exports = function(app) {
         request('https://news.ycombinator.com/', function(error, response, html) {
             var $ = cheerio.load(html);
             //console.log(response);
-            $('.title').each(function(index) {
+            $('.title').each(function(i, element) {
 
                 var title = $(this).children('a').text();
                 var link = $(this).children('a').attr('href');
