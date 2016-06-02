@@ -9,7 +9,16 @@ var PORT = process.env.PORT || 80;
 
 
 // Database
-mongoose.connect('mongodb://localhost/mongonews');
+var database = { 
+
+local: 'mongodb://localhost/mongonews',
+remote: 'mongodb://user1:password@ds021663.mlab.com:21663/mongonews'
+
+}
+
+var useDatabase = database.remote;
+mongoose.connect(useDatabase);
+
 var db = mongoose.connection;
 
 db.on('error', function(err){
@@ -17,7 +26,7 @@ db.on('error', function(err){
 });
 
 db.once('open', function(err){
-	console.log('mongoose connected');
+	console.log('mongoose connected: ', useDatabase);
 });
 
 // BodyParser
