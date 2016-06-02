@@ -1,7 +1,6 @@
 $.getJSON('/articles', function(data) {
   for (var i = 0; i<data.length; i++){
-    // $('#articles').append('<h2><p data-id="' + data[i]._id + '">' + data[i].title + '<br />'+ data[i].desc +'</p></h2>'+'<a href=www.npmjs.com'+data[i].link +' target = "_blank">'+data[i].link+"<br />");
-    $('.collection').append('<li class="collection-item"><h2><p data-id="' + data[i]._id + '">' + data[i].title + '<br />'+ data[i].desc +'</p></h2>'+'<a href=www.npmjs.com'+data[i].link +' target = "_blank">'+data[i].link+"<br />" + '</li>');
+    $('.collection').append('<li class="collection-item"><h3><p data-id="' + data[i]._id + '">' + data[i].title + '<i class="material-icons">settings</i><br /><h2> Description:<br/>'+ data[i].desc +'</3></p></h2>'+'<a href=https://www.npmjs.com'+data[i].link +' target = "_blank">'+data[i].link+"<br />" + '</li>');
   }
 });
 
