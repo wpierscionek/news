@@ -27,7 +27,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 //Public 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('./app/public'));
 
 // Routes
 require('./app/routing/api-routes.js')(app); 
