@@ -12,7 +12,7 @@ var PORT = process.env.PORT || 80;
 var database = { 
 
 local: 'mongodb://localhost/mongonews',
-remote: 'mongodb://user1:password@ds021663.mlab.com:21663/mongonews'
+remote: 'mongodb://user:password@ds011913.mlab.com:11913/heroku_dls8r9rx'
 
 }
 
